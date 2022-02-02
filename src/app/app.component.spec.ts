@@ -1,20 +1,10 @@
 import { TestBed, async } from "@angular/core/testing";
 import { AppComponent } from "./app.component";
-import { JokesModule } from "./jokes/jokes.module";
-import { JokesService } from "./jokes/jokes.service";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent],
-      imports: [JokesModule],
-      providers: [
-        JokesService
-        // {
-        //   provide: JokesService,
-        //   useValue: {getJoke()}
-        // }
-      ]
     }).compileComponents();
   }));
 

@@ -11,26 +11,27 @@ export class JokesComponent implements OnInit {
   message: string = "";
   title: string = "";
 
-  constructor(private jokesService: JokesService) {}
+  constructor(private jokesService: JokesService) {}  
 
-  setJoke(jokes: Joke[]): void {
+  setStaticJoke(): void {
+    let joke = new Joke();
+    joke.content = "fake joke";
+    joke.category = "fake category";
+    joke.title = "fake title";
+    this.jokes.push(joke);
+  }
+
+  setServiceJoke(): void {
     this.jokesService.getJoke().subscribe((data) => {
-      jokes.push(data);
-      //console.log("data", data);
+      this.jokes.push(data);
     });
   }
 
   ngOnInit(): void {
     this.title = "Get your laugh on!!";
-    this.message = "Lighten and brighten up your day with a Chuck Noris joke.";
-    let joke = new Joke();
-    joke.content = "fake joke";
-    joke.category = "fake category";
-    joke.title = "fake title";
-    console.log("joke", joke);
-    this.jokes.push(joke);
-    console.log("jokes", this.jokes);
+    this.message = "Lighten and brighten up your day with a Chuck Norris joke.";
 
-    this.setJoke(this.jokes);
+    this.setStaticJoke(); 
+    this.setServiceJoke();
   }
 }

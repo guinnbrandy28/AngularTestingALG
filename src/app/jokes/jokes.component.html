@@ -1,5 +1,4 @@
 <body>
-  <!-- todo make dumb components        -->
   <main class="container py-1 mb-2">
     <div class="p-4 p-md-10 mb-4 text-white rounded bg-dark">
       <div class="col-md-10 px-0">
@@ -9,54 +8,19 @@
         </p>
       </div>
     </div>
+    <hr />
     <div class="row mb-2" *ngFor="let joke of jokes">
       <div class="col-md-12">
-        <div
-          class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-        >
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <span class="mb-0">Title: {{joke.title}}</span>
           <div class="col p-4 d-flex flex-column position-static">
-            <h6 class="mb-0">{{joke.title}}</h6>
-            <div class="mb-1 text-muted">{{joke.category}}</div>
-            <hr />
-            <br /><br />
+            
+            <span class="mb-1">Category: {{joke.category}}</span>
             <h3 class="card-text mb-auto">{{joke.content}}</h3>
-          </div>
-          <!-- todo add images -->
-          <div class="col-auto d-none d-lg-block">
-            <svg
-              class="bd-placeholder-img"
-              width="200"
-              height="250"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Placeholder: Thumbnail"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            </svg>
-          </div>
+            <hr />
+          </div>          
         </div>
       </div>
-    </div>
-    <!-- todo add categories         -->
-    <div class="p-4">
-      <h4 class="fst-italic">Search for a joke by category</h4>
-      <ol class="list-unstyled">
-        <li><a href="#">Category1</a></li>
-        <li><a href="#">Category2</a></li>
-        <li><a href="#">Category3</a></li>
-      </ol>
-    </div>
-    <div class="row g-9">
-      <div class="col-md-18">
-        <h6 class="pb-4 mb-4 fst-italic border-bottom">
-          Using free JSON API for hand curated Chuck Norris facts.
-          https://api.chucknorris.io/
-        </h6>
-      </div>
-    </div>
+    </div>    
   </main>
 </body>

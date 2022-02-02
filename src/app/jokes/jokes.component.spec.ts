@@ -1,5 +1,5 @@
-import { TestBed, async } from "@angular/core/testing";
-import { JokesComponent } from "./jokes.component";
+// import { TestBed, async } from "@angular/core/testing";
+// import { JokesComponent } from "./jokes.component";
 
 // describe("JokesComponent", () => {
 //   beforeEach(async(() => {
