@@ -4,7 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { MyInterceptor } from "./utility.httpInterceptor";
 
 import { AppComponent } from "./app.component";
-import { JokesModule } from "./jokes/jokes.module";
+import { JokesModule } from "./jokes/jokes.module";//
 
 @NgModule({
   declarations: [AppComponent],
