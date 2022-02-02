@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng test",
+    "start": "ng serve",
     "build": "ng build",
     "jest": "jest --watchAll",
     "jest:singlerun": "jest",
