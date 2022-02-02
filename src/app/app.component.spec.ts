@@ -43,4 +43,33 @@ describe("AppComponent", () => {
       "Angular testing is so fun, right?"
     );
   });
+
+  it("should render a joke component", () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    const jokes = compiled.querySelector("app-jokes");
+    expect(jokes).not.toBeNull();
+    expect(jokes).toBeDefined();
+  });
+
+  it("should render a title in the joke component", () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    //console.log(compiled.querySelector("[data-joke-title]"));
+    const text = compiled.querySelector("[data-joke-title]").textContent;
+    expect(text).toContain(
+      "Get your laugh on!!"
+    );
+  });
+
+  it("should render 2 jokes in the joke component", () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    console.log(compiled.querySelectorAll("[data-joke-container]"));
+    const jokes = compiled.querySelectorAll("[data-joke-container]");
+    expect(jokes.length).toEqual(2);
+  });
 });
