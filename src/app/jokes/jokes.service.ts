@@ -18,7 +18,7 @@ export class JokesService {
 
   getJoke(): Observable<Joke> {
     let joke = new Joke();
-    joke.content = "something";
+    joke.content = "something so funny";
     joke.category = "Random";
     joke.title = "Random joke of the day";
     return of(joke);
